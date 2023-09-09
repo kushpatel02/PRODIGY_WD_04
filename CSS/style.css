@@ -1,0 +1,591 @@
+*{
+    background-color: #0d0d0d;
+}
+
+
+/* title */
+#title{
+    color: whitesmoke;
+}
+
+.container-fluid{
+    /* padding: 1% 10%; */
+    padding: 0.75% 10%;
+}
+
+
+/* navigation bar */
+.navbar{
+    padding-bottom: 1%;
+}
+
+.navbar img{
+    width: 2%;
+}
+
+.nav-item{
+    padding: 0px 18px;
+    color: #696692 ;
+}
+
+.navbar-brand{
+    font-family: "Ubuntu";
+    font-weight: bold;
+    font-size: 2rem;
+    color: #9a95d1;
+    transition: 250ms ease-in-out;
+}
+
+.navbar-brand:hover{
+    color: #d0d0d0;
+}
+
+.navbar-nav li a{
+    font-family: 'PT Mono', monospace;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #b5b5b5;
+}
+
+.navbar-nav li a:hover{
+    color: #9a95d1;
+}
+
+.navbar-nav .icons-nb{
+    color: #696692;
+    transition: 250ms ease-in-out;
+}
+
+.navbar-nav .icons-nb:hover{
+    color: #b5b5b5;
+}
+
+
+/* nav elements hover cursor animation */
+.text{ 
+    position: relative;
+    display: inline-block;
+    line-height: 1.1rem;
+    font-size: 1.1rem;
+}
+  
+.text:hover::after{
+    content: "";
+    top: 0;
+    /* right: -15px; */
+    display: inline-block;
+    background-color: white;
+    vertical-align: top;
+    width: 8px;
+    height: 1.1rem;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink{
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+
+.nav-underglow {
+    text-align: center;
+    background: hsl(0, 0%, 100%);
+    /* padding: 16px 24px; */
+    position: relative;
+    /* border-radius: 8px; */
+    box-shadow: 0 0 0 1px rgba(0,0,0,.01);
+    color:#b5b5b5;
+    background: #0d0d0d;
+    z-index: 0;
+}
+.nav-underglow::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(1) translateZ(0);
+    filter: blur(15px);
+    background: linear-gradient(
+        60deg,
+        #9a95d1,
+        #0d0d0d,
+        #9a95d1
+    );
+    background-size: 200% 200%;
+    animation: animateGlow 1.25s linear infinite;
+}
+  
+@keyframes animateGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+}
+
+
+
+.img-container{
+    width: 80%;
+    background-color: #696692;
+    margin-left: 20%;
+    border-radius: 50px;
+    border: 2px solid #b5b5b5;
+}
+
+
+
+/* home */
+
+.container-fluid2{
+    padding: 5% 15%;
+}
+
+#home{
+    /* color: whitesmoke; */
+    color: #b5b5b5;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'PT Mono', monospace;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+#home .space{
+    letter-spacing: 3px;
+    word-spacing: 6px;
+}
+
+#home .name{
+    /* color: whitesmoke; */
+    width: 460px;
+    font-family: 'PT Mono', monospace;
+    font-size: 5rem;
+    font-weight: 600;
+    word-spacing: 5px;
+    color: transparent;
+    -webkit-text-stroke: 2px #696692;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+#home .name:hover{
+    font-weight: 600;
+    /* color: #696692; */
+    -webkit-text-stroke: 2px #9a95d1;
+    color: #9a95d1;
+}
+
+/* #home .designation{
+    font-family: 'PT Mono', monospace;
+    font-size: 2.2rem;
+    margin-top: 4%;
+} */
+
+.format{
+    margin-top: 5%;
+    padding-left: 5%;
+}
+
+
+/* _ cursor animation */
+
+@import "compass/css3";
+
+#home span {
+	/* font-family: 'PT Mono', monospace; */
+	font-size: 2.4rem;
+}
+#home span:after {
+	content:"_";
+	opacity: 0;
+	animation: cursor 1s infinite;
+}
+@keyframes cursor {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+#wrap {
+	box-sizing: border-box;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+/* hire me button */
+
+.button-hm {
+    font-family:'PT Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: #b5b5b5;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+  
+.button-hm:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #696692,
+      #0d0d0d,
+      #696692
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+  
+@keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    20%{
+        background-position: 400% 0;
+    }
+    50% {
+      background-position: 0 0;
+    }
+    80%{
+        background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+}
+  
+.button-hm:hover::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+/* portfolio button */
+
+.button-pt {
+    font-family:'PT Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: #9a95d1;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+  
+.button-pt:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #b5b5b5,
+      #0d0d0d,
+      #b5b5b5
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+  
+@keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    20%{
+        background-position: 400% 0;
+    }
+    50% {
+      background-position: 0 0;
+    }
+    80%{
+        background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+}
+  
+.button-pt:hover::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+/* about */
+
+#about{
+    padding: 10% 17%;
+    font-family: 'PT Mono', monospace;
+    color: #b5b5b5;
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#about h2 {
+    /* width: 500px; */
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 900;
+    color: #b5b5b5;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    animation: textclip 1.5s linear infinite;
+    background: linear-gradient(
+      45deg,
+      #696692,
+      #0d0d0d,
+      #696692
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+#about p{
+    font-size: 2rem;
+    line-height: 2;
+}
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+
+
+/* contact me */
+
+.container-fluid3{
+    padding: 12% 15%;
+}
+
+#contact{
+    font-family: 'PT Mono', monospace;
+    text-align: center;
+    color: #b5b5b5;
+    line-height: 2;
+}
+
+/* #contact col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+#contact p{
+    font-size: 1.9rem;
+}
+
+#contact h2{
+    font-size: 4.5rem;
+    color: #696692;
+    font-weight: 600;
+}
+
+#contact h2 {
+    /* width: 500px; */
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 900;
+    color: #b5b5b5;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    animation: textclip 1.5s linear infinite;
+    background: linear-gradient(
+      45deg,
+      #696692,
+      #0d0d0d,
+      #696692
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+
+
+/* #contact .icons-ct{
+    color: #696692;
+    transition: 250ms ease-in-out;
+}
+
+#contact .icons-ct:hover{
+    color: #b5b5b5;
+} */
+
+#contact .spacing{
+    line-height: 3.5;
+    font-size: 1.3rem;
+}
+
+
+.button-ct {
+    font-family:'PT Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: #b5b5b5;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-ct {
+    font-family: "PT Mono", monospace;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #b5b5b5;
+    cursor: pointer;
+    border: 3px solid #b5b5b5;
+    border-radius: 0%;
+    padding: 0.25em 0.5em;
+    box-shadow: #696692 1px 1px, #696692 2px 2px, #696692 3px 3px, #696692 4px 4px, #696692 5px 5px, 
+        #696692 6px 6px, #696692 7px 7px, #696692 8px 8px, #696692 9px 9px, #696692 10px 10px;
+    position: relative;
+  }
+  
+  .button-ct:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+
+
+#contact .icon-ctm{
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+
+
+
+/* footer */
+
+#footer{
+    text-align: center;
+    padding: 9rem;
+    font-size: 1.1rem;
+    /* color: whitesmoke; */
+    color: #b5b5b5;
+}
+
+#footer p{
+    /* color: whitesmoke; */
+    color: #b5b5b5;
+    /* color: #0d0d0d; */
+    font-family: 'PT Mono', monospace;
+    font-weight: 400;
+    font-size: 1.5rem;
+    /* font-weight: 600; */
+}
+
+#footer .icons-ft{
+    color: #696692;
+    transition: 250ms ease-in-out;
+}
+
+#footer .icons-ft:hover{
+    color: #b5b5b5;
+}
+
+#footer .ft-dg{
+    font-size: 1.5rem;
+}
+
+#footer .ft-nm{
+    color: #696692;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    transition: 200ms ease-in-out;
+}
+#footer .ft-nm:hover{
+    font-weight: 900;
+    cursor: pointer;
+}
